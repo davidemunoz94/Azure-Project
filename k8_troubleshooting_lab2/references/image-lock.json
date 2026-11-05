@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-11-03T19:32:03.300506+00:00",
+  "image": "docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f",
+  "platforms": [
+    {
+      "architecture": "amd64",
+      "os": "linux"
+    },
+    {
+      "architecture": "arm",
+      "os": "linux",
+      "variant": "v7"
+    },
+    {
+      "architecture": "arm64",
+      "os": "linux",
+      "variant": "v8"
+    },
+    {
+      "architecture": "386",
+      "os": "linux"
+    },
+    {
+      "architecture": "ppc64le",
+      "os": "linux"
+    }
+  ],
+  "source": "https://github.com/docker-library/official-images/blob/master/library/python"
+}

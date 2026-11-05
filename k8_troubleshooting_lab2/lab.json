@@ -1,0 +1,20 @@
+{
+  "subscription_id": "401ba67f-53e8-4752-a454-991c99df8ccc",
+  "subscription_name": "Learn Sub 1",
+  "tenant_id": "f207f73f-1c0c-47d8-94af-80cfb4cebfd1",
+  "location": "eastus",
+  "resource_group": "rg-aks-troubleshoot-lab2",
+  "node_resource_group": "rg-aks-troubleshoot-lab2-nodes",
+  "cluster_name": "aks-k8s-lab2",
+  "context": "aks-k8s-lab2",
+  "local_context": "kind-k8s-lab2",
+  "namespace": "k8s-lab2",
+  "project_tag": "k8s-troubleshooting-lab2",
+  "node_count": 2,
+  "vm_size": "Standard_D4s_v5",
+  "vm_family": "standardDSv5Family",
+  "vcpus_per_node": 4,
+  "os_disk_gib": 128,
+  "kubernetes_version": "1.36",
+  "image": "docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f"
+}

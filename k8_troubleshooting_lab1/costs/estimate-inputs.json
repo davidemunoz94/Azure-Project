@@ -1,0 +1,47 @@
+{
+  "checked_date": "2026-11-01",
+  "status": "November 1 infrastructure removed; final cleanup verified; model retained for future sessions; billed usage unchecked",
+  "currency": "USD",
+  "region": "eastus",
+  "vm_sku": "Standard_D2s_v7",
+  "vm_per_node_hour": 0.132,
+  "disk_per_node_month": 19.71,
+  "disk_sku": "Premium_SSD_Managed_Disk_P10",
+  "monthly_hours": 730,
+  "public_ip_per_hour": 0.005,
+  "load_balancer_rule_allowance_per_hour": 0.025,
+  "load_balancer_price_status": "Verified $0.025/hour Standard Included LB Rules and Outbound Rules meter 27827eb0-7f60-4928-940b-f5fe15e7a4cb published under armRegionName Global",
+  "registry_tier": "Basic (verified in starter)",
+  "registry_per_day": 0.1666,
+  "registry_minimum_days_for_planning": 1,
+  "task_per_vcpu_second": 0.0001,
+  "build_vcpus": 2,
+  "build_seconds": 300,
+  "build_count": 1,
+  "aks_control_plane_per_hour": 0,
+  "aks_tier": "Free (verified in starter)",
+  "node_scenarios": [
+    1,
+    2
+  ],
+  "hour_scenarios": [
+    1,
+    2,
+    4,
+    8,
+    24,
+    730
+  ],
+  "excludes": [
+    "Taxes and account-specific discounts or credits",
+    "Network data processing, outbound bandwidth and cross-region transfer",
+    "Registry storage over the included 10 GB",
+    "Extra builds, surge nodes and longer provisioning or deletion times",
+    "Monitoring ingestion, NAT Gateway, paid AKS tiers and other add-ons"
+  ],
+  "deployment_nodes": 1,
+  "disk_status": "Verified VMSS OS disk 128 GiB Managed Premium_LRS; P10 tier pricing used",
+  "build_status": "Replacement November 1 build succeeded on 2 CPUs, linux/amd64, about 33 seconds; model retains 300-second allowance; earlier run/rebuild usage additional",
+  "last_cleanup_verified_at_utc": "2026-11-01T00:25:42.870235+00:00",
+  "actual_network": "One Standard static IPv4, one Standard Regional LB outbound rule, zero app LB rules; no add-ons"
+}

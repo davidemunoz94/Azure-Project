@@ -1,0 +1,103 @@
+{
+  "checkedDate": "2026-10-30",
+  "source": "Azure connector pricing_get, backed by Azure Retail Prices API",
+  "currency": "USD",
+  "region": "eastus",
+  "note": "Rates verified; deployment quantities and selected tiers unverified. Raw task meter returned both zero and paid rates; use paid rate for planning.",
+  "selectedMeters": [
+    {
+      "armSkuName": "Standard_D2s_v7",
+      "skuName": "Standard_D2s_v7",
+      "productName": "Virtual Machines Dsv7-series Linux",
+      "serviceName": "Virtual Machines",
+      "region": "eastus",
+      "retailPrice": 0.132,
+      "unitOfMeasure": "1 Hour",
+      "currencyCode": "USD",
+      "priceType": "Consumption",
+      "effectiveStartDate": "2026-05-01T00:00:00+00:00",
+      "meterName": "Standard_D2s_v7",
+      "meterId": "5d168cf4-3804-5028-af50-ce4286da3f3f",
+      "isPrimaryMeterRegion": true
+    },
+    {
+      "armSkuName": "",
+      "skuName": "Basic",
+      "productName": "Container Registry",
+      "serviceName": "Container Registry",
+      "serviceFamily": "Containers",
+      "region": "eastus",
+      "location": "US East",
+      "retailPrice": 0.0001,
+      "unitPrice": 0.0001,
+      "currencyCode": "USD",
+      "unitOfMeasure": "1 Second",
+      "priceType": "Consumption",
+      "effectiveStartDate": "2019-04-01T00:00:00+00:00",
+      "meterName": "Task vCPU Duration",
+      "meterId": "bb93fa13-a4e2-4027-85b9-b06e3353ffc3",
+      "isPrimaryMeterRegion": false
+    },
+    {
+      "armSkuName": "",
+      "skuName": "Basic",
+      "productName": "Container Registry",
+      "serviceName": "Container Registry",
+      "serviceFamily": "Containers",
+      "region": "eastus",
+      "location": "US East",
+      "retailPrice": 0.1666,
+      "unitPrice": 0.1666,
+      "currencyCode": "USD",
+      "unitOfMeasure": "1/Day",
+      "priceType": "Consumption",
+      "effectiveStartDate": "2018-01-01T00:00:00+00:00",
+      "meterName": "Basic Registry Unit",
+      "meterId": "5c9e7a65-5784-494c-9718-7749d4075dd9",
+      "isPrimaryMeterRegion": false
+    },
+    {
+      "armSkuName": "Premium_SSD_Managed_Disk_P10",
+      "skuName": "P10 LRS",
+      "productName": "Premium SSD Managed Disks",
+      "serviceName": "Storage",
+      "serviceFamily": "Storage",
+      "region": "eastus",
+      "location": "US East",
+      "retailPrice": 19.71,
+      "unitPrice": 19.71,
+      "currencyCode": "USD",
+      "unitOfMeasure": "1/Month",
+      "priceType": "Consumption",
+      "effectiveStartDate": "2018-05-01T00:00:00+00:00",
+      "meterName": "P10 LRS Disk",
+      "meterId": "93a6a529-4f49-47cb-9b1e-db9e5f23263f",
+      "isPrimaryMeterRegion": true
+    },
+    {
+      "armSkuName": "",
+      "skuName": "Standard",
+      "productName": "IP Addresses",
+      "serviceName": "Virtual Network",
+      "serviceFamily": "Networking",
+      "region": "eastus",
+      "location": "US East",
+      "retailPrice": 0.005,
+      "unitPrice": 0.005,
+      "currencyCode": "USD",
+      "unitOfMeasure": "1 Hour",
+      "priceType": "Consumption",
+      "effectiveStartDate": "2018-06-01T00:00:00+00:00",
+      "meterName": "Standard IPv4 Static Public IP",
+      "meterId": "9c150bf9-2bad-430e-a53c-c213804f49ef",
+      "isPrimaryMeterRegion": false
+    }
+  ],
+  "unresolved": [
+    {
+      "component": "Standard regional load balancer rules",
+      "planningAllowanceUsdPerHour": 0.025,
+      "status": "Unverified allowance. Three scoped retail queries returned no matching meters; recheck before deployment."
+    }
+  ]
+}

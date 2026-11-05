@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-11-03T19:42:08.629485+00:00",
+  "subscription_id": "401ba67f-53e8-4752-a454-991c99df8ccc",
+  "state": "Enabled",
+  "resource_groups_at_check": [],
+  "sku": [
+    {
+      "family": "standardDSv5Family",
+      "name": "Standard_D4s_v5",
+      "restrictions": []
+    }
+  ],
+  "quota": {
+    "cores": {
+      "used": 0,
+      "limit": 10
+    },
+    "standardDSv5Family": {
+      "used": 0,
+      "limit": 0
+    }
+  },
+  "providers": [
+    {
+      "name": "Microsoft.ContainerService",
+      "state": "Registered"
+    },
+    {
+      "name": "Microsoft.Compute",
+      "state": "Registered"
+    },
+    {
+      "name": "Microsoft.Network",
+      "state": "Registered"
+    },
+    {
+      "name": "Microsoft.Storage",
+      "state": "Registered"
+    }
+  ],
+  "planned_minor_available": true,
+  "blockers": [
+    "standardDSv5Family: 0 available vCPUs; 8 needed for baseline."
+  ],
+  "warnings": [
+    "cores: 12 available vCPUs needed for a one-node upgrade surge; no upgrades are scheduled.",
+    "standardDSv5Family: 12 available vCPUs needed for a one-node upgrade surge; no upgrades are scheduled."
+  ],
+  "cloud_resources_created": false,
+  "note": "Read-only check; deployment permissions, ARM provider validation and live exercises remain unverified."
+}

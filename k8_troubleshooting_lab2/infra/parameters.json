@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "clusterName": {
+      "value": "aks-k8s-lab2"
+    },
+    "nodeResourceGroup": {
+      "value": "rg-aks-troubleshoot-lab2-nodes"
+    },
+    "kubernetesVersion": {
+      "value": "1.36"
+    },
+    "nodeCount": {
+      "value": 2
+    },
+    "vmSize": {
+      "value": "Standard_D4s_v5"
+    }
+  }
+}

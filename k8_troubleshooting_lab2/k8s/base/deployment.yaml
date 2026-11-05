@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab2-web
+  namespace: k8s-lab2
+  labels:
+    learning.codex/lab: k8s-lab2
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: lab2-web
+  template:
+    metadata:
+      labels:
+        app: lab2-web
+        learning.codex/lab: k8s-lab2
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+      - name: web
+        image: docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f
+        imagePullPolicy: IfNotPresent
+        command: [python, -B, -u, /app/server.py]
+        env:
+        - name: LAB_MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: lab2-settings
+              key: message
+              optional: false
+        ports:
+        - name: http
+          containerPort: 8080
+        startupProbe:
+          httpGet: {path: /healthz, port: http}
+          periodSeconds: 2
+          failureThreshold: 30
+        readinessProbe:
+          httpGet: {path: /readyz, port: http}
+          periodSeconds: 2
+        livenessProbe:
+          httpGet: {path: /healthz, port: http}
+          periodSeconds: 10
+        resources:
+          requests: {cpu: 50m, memory: 32Mi}
+          limits: {cpu: 250m, memory: 96Mi}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop: [ALL]
+        volumeMounts:
+        - {name: code, mountPath: /app, readOnly: true}
+      volumes:
+      - name: code
+        configMap:
+          name: lab2-web-code
+          defaultMode: 292

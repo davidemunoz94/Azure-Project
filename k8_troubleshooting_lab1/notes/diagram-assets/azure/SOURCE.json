@@ -1,0 +1,47 @@
+{
+  "downloaded_on": "2026-11-03",
+  "source_page": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+  "archive_url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "files": {
+    "aks.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/containers/10023-icon-service-Kubernetes-Services.svg",
+      "sha256": "81954a481503057498d543a51863b2eb4673284e109662cdc421051d11dba25c"
+    },
+    "acr.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/containers/10105-icon-service-Container-Registries.svg",
+      "sha256": "c134b0a442f203a7eeeb6f99a1f02ed34e51373d7fca59f96c9f125874c9d7d4"
+    },
+    "virtual-network.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+      "sha256": "64a5e75ecef2f9f69067faa2eb131266cb8f2858706f8ab74bfea5ad0d98b14d"
+    },
+    "load-balancer.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/networking/10062-icon-service-Load-Balancers.svg",
+      "sha256": "169edfa4edbc0cab6fdc1eef9243925588504a16f7729734e0e2161a9ca1d16c"
+    },
+    "public-ip.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/networking/10069-icon-service-Public-IP-Addresses.svg",
+      "sha256": "549fbcf643129dd913c8aa3424a51beb6b718c412ac4c7963214f00ef839c50b"
+    },
+    "nsg.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/networking/10067-icon-service-Network-Security-Groups.svg",
+      "sha256": "cf4023ddaa11961904e1e4601864ccd20b9f60686cb38ad7f8ff8385d855c4de"
+    },
+    "vm-scale-set.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/compute/10034-icon-service-VM-Scale-Sets.svg",
+      "sha256": "a53772c07fe89cdbb876ce77e22dba0863c1459173b77a1eec73fbdd2048637f"
+    },
+    "disk.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/compute/10032-icon-service-Disks.svg",
+      "sha256": "7ab5cc684d995ff898448b32424a55bbb5c6669a83a0bb7c547047fec21f292f"
+    },
+    "resource-group.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg",
+      "sha256": "4d2b2eacb37735849d2e556074ac8564f92fada70672b40985c77ea666e82977"
+    },
+    "subscription.svg": {
+      "archive_path": "Azure_Public_Service_Icons/Icons/general/10002-icon-service-Subscriptions.svg",
+      "sha256": "d69843a70bd38eefa5b70a4d0b803502f95cdf061c59aed48b435170a15919b4"
+    }
+  }
+}

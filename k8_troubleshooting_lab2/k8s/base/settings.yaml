@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lab2-settings
+  namespace: k8s-lab2
+  labels:
+    learning.codex/lab: k8s-lab2
+data:
+  message: Hello from Kubernetes lab 2
