@@ -1,6 +1,6 @@
 # Kubernetes / AKS troubleshooting lab 2
 
-**Status: prepared locally; no Kubernetes cluster or Azure resources deployed for this lab.** The application and safety/flow tests pass locally, and baseline/fault manifests pass Kubernetes schema checks. Live exercises still need a cluster. [Validation record](notes/VALIDATION.md).
+**Status: Scenario 1 independently repaired and verified; local cluster deleted at session end. No Azure resources deployed for this lab.** After the repeated fault, the learner restored a Ready web Pod; Pod and Service requests returned HTTP 200. Cleanup confirmed no local kind clusters or Lab 2 node containers remain. Scenarios 2–3 remain unverified live. [Validation record](notes/VALIDATION.md).
 
 Three new exercises build on lab 1:
 

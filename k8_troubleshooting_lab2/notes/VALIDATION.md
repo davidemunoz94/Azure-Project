@@ -1,4 +1,15 @@
-# Local validation — November 3, 2026
+# Lab 2 validation
+
+## Live local session — November 7, 2026
+
+- Started Docker Desktop and created the dedicated kind cluster `k8s-lab2`; node Ready on Kubernetes v1.37.0, arm64. No Azure resources created.
+- `lab.py --context kind-k8s-lab2 up` verified one Ready web Pod and HTTP 200 through both Pod and Service.
+- `lab.py --context kind-k8s-lab2 fault 1` reverified the healthy baseline, then observed Pending / Unschedulable with the intended FailedScheduling event. Learner identified insufficient CPU; repair applied on request. Deployment rollout and subsequent Pod/Service HTTP 200 verified.
+- Scenarios 2–3 have not been tested live. The November 3 schema checks below used Kubernetes 1.36.0; this session used kind's default v1.37.0 node image.
+- On request, repeated `lab.py --context kind-k8s-lab2 fault 1`: healthy baseline reverified, then Pending / Unschedulable with the intended scheduling failure observed. Learner independently repaired the retry; observed Deployment generation matched current generation, one desired web Pod was Ready, and the in-cluster probe verified Pod and Service HTTP 200. Exact repair settings are recorded in the journal.
+- On user request, deleted only the dedicated local cluster with `kind delete cluster --name k8s-lab2`. `kind get clusters` reported none; Docker inventory showed no remaining Lab 2 node containers; the kind-k8s-lab2 kubeconfig context was removed. Local cleanup complete; no Azure resources created or changed.
+
+## Preparation — November 3, 2026
 
 ## Passed
 
@@ -9,7 +20,7 @@
 - **Read-only Azure checks:** enabled intended subscription/tenant, empty resource-group inventory, unrestricted D4s_v5 SKU, providers Registered, planned AKS 1.36 minor offered. Regional quota 0/10; Dsv5-family quota 0/0. Preflight correctly exits 2 and records the family-quota blocker, not a successful deployment.
 - **Diagram:** rendered and visually inspected; embedded Azure icons preserve original artwork/aspect ratios. Planned resources clearly labeled.
 
-## Not yet verified
+## Not yet verified at preparation time
 
 - No kind cluster was created: Docker daemon is stopped. Installed kind v0.33.0 and kubectl v1.37.1 were checked; confirm the chosen kind node image's Kubernetes version before starting a later session.
 - No Azure resources were created. No live baseline, scheduler fault, ConfigMap failure, routing failure, learner repair or cleanup was claimed for lab 2.
